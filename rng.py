@@ -1,6 +1,11 @@
-# Use Python 3
-from tkinter import *
+import sys
 import random
+
+# Check the Python version
+if sys.version_info[0] == 3:
+    from tkinter import *
+else:
+    from Tkinter import *
 
 # Generate a random integer in the range upper to lower
 def start_rng():
