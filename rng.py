@@ -14,6 +14,8 @@ def start_rng():
     num = random.randint(lower, upper)
     w3 = Label(root,
                text = num,
+               fg = "red",
+               font = "Helvetica 25 bold",
                pady = 5,
                padx = 10,
                justify = RIGHT).grid(row = 2, column = 1)
@@ -22,7 +24,7 @@ def start_rng():
 
 # Main window
 root = Tk()
-root.title("RNG Generator")
+root.title("RNG")
 
 # Labels
 w1 = Label(root,
@@ -35,14 +37,18 @@ w2 = Label(root,
            padx = 10).grid(row = 1)
 
 # Entries
-e1 = Entry(root)
-e2 = Entry(root)
+e1 = Entry(root,
+           width = 12)
+e2 = Entry(root,
+           width = 12)
 e1.grid(row = 0, column = 1)
 e2.grid(row = 1, column = 1)
 
 # Start button
 b = Button(root,
             text = "Start",
+            width = 5,
+            borderwidth = 5,
             pady = 10,
             padx = 10,
             command = start_rng).grid(row = 2)
